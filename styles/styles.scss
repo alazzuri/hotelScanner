@@ -33,4 +33,26 @@ $font-primary: "Montserrat", sans-serif;
   height: 100vh;
   background-color: $bg-primary;
   font-family: $font-primary;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  height: 20%;
+  background-color: $bg-secondary;
+  padding: 20px;
+
+  .main-logo {
+    width: 20%;
+    color: $color-secondary;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+
+    .logo-name {
+      margin-left: 10px;
+      font-size: 1.5rem;
+      @include fontBold();
+    }
+  }
 }

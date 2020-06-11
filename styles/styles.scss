@@ -1,0 +1,36 @@
+//IMPORTS
+@import "./normalize";
+@import "./reset";
+
+//VARIABLES
+$white: #ffffff;
+$bg-primary: #f1f2f8;
+$bg-secondary: $white;
+$color-primary: #2a4494;
+$color-secondary: #3590f3;
+$text-primary: rgba(00, 00, 00, 0.7);
+$color-muted: #c4c4c4;
+$font-primary: "Montserrat", sans-serif;
+
+//MIXINS
+@mixin fontLight {
+  font-family: $font-primary;
+  font-weight: 200;
+}
+
+@mixin fontNormal {
+  font-family: $font-primary;
+  font-weight: 400;
+}
+
+@mixin fontBold {
+  font-family: $font-primary;
+  font-weight: 700;
+}
+
+//STYLES
+.main-container {
+  height: 100vh;
+  background-color: $bg-primary;
+  font-family: $font-primary;
+}

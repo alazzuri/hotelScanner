@@ -101,6 +101,7 @@ p {
 
 .header .main-logo {
   width: 20%;
+  max-width: 300px;
   color: #3590f3;
   padding: 20px;
   display: -webkit-box;
@@ -130,7 +131,7 @@ p {
 
 .header .data-details-container .date-details {
   color: #2a4494;
-  padding-top: 20px;
+  padding-top: 15px;
   padding-right: 10px;
   font-size: 1.2rem;
 }

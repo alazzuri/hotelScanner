@@ -168,4 +168,77 @@ p {
     text-align: center;
   }
 }
+
+.filter-bar {
+  height: auto;
+  width: 90%;
+  background-color: #2a4494;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.filter-bar label {
+  color: #ffffff;
+}
+
+.filter-bar .input-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 0.8rem;
+}
+
+.filter-bar .input-container input,
+.filter-bar .input-container select {
+  height: 100%;
+  max-width: 100%;
+  margin-left: 3px;
+  font-size: 0.8rem;
+  border: none;
+}
+
+.filter-bar .input-container select {
+  padding: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .filter-bar {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+.form-group {
+  min-width: 230px;
+}
+
+.form-control input:focus,
+.form-control select:focus {
+  border: none;
+  outline: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.custom-select:focus,
+.form-control:focus-within {
+  border-color: #3590f3;
+  outline: 0;
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(241, 242, 248, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(241, 242, 248, 0.5);
+}
 /*# sourceMappingURL=styles.css.map */

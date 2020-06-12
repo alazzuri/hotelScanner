@@ -4,11 +4,35 @@ const options = {
   price: ["$", "$$", "$$$", "$$$$"],
   size: ["small", "medium", "big"],
 };
+const { useState } = React;
 
-const App = () => (
-  <Container>
-    <Header />
-    <FilterBar options={options} />
-    <HotelContainer data={hotelsData} />
-  </Container>
-);
+const App = () => {
+  const [selectedHotels, setSelectedHotels] = useState(hotelsData);
+  const [filters, setFilters] = useState({});
+
+  const handleChange = (e) => {
+    const inputType = e.target.id.split("input-").join("").toLowerCase();
+    //obtaining the correct data based on each input type
+    const data =
+      e.target.type === "date"
+        ? e.target.valueAsNumber
+        : inputType === "precio"
+        ? e.target.value.length
+        : e.target.value;
+
+    setFilters((prevState) => {
+      return { ...prevState, [inputType]: data };
+    });
+  };
+
+  return (
+    <Container>
+      <Header
+        dateFrom={convertDateToString(filters.entrada)}
+        dateTo={convertDateToString(filters.salida)}
+      />
+      <FilterBar options={options} onChangeFunction={handleChange} />
+      <HotelContainer data={selectedHotels} />
+    </Container>
+  );
+};

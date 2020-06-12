@@ -77,11 +77,11 @@ p {
 }
 
 .main-container {
-  height: 100vh;
   background-color: #f1f2f8;
   font-family: "Montserrat", sans-serif;
   margin: 0;
   padding: 0;
+  padding-bottom: 100px;
 }
 
 .header {
@@ -240,5 +240,98 @@ p {
   outline: 0;
   -webkit-box-shadow: 0 0 0 0.2rem rgba(241, 242, 248, 0.5);
           box-shadow: 0 0 0 0.2rem rgba(241, 242, 248, 0.5);
+}
+
+.hotels-container {
+  width: 90%;
+  margin-top: 30px;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 20px;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.card-container {
+  border: 0.2px solid #685f74;
+  border-radius: 5px;
+  -webkit-box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.2);
+          box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.2);
+}
+
+.card-container .btn-book {
+  width: 100%;
+  padding: 16px;
+  background-color: #2a4494;
+  color: #ffffff;
+  border-radius: 0px 0px 5px 5px;
+}
+
+.card-container .btn-book:hover {
+  background-color: #304da8;
+}
+
+.detail-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.detail-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 0.2px solid #685f74;
+  border-radius: 5px;
+  -webkit-box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.2);
+          box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.2);
+}
+
+.detail-icon i {
+  background-color: #2a4494;
+  color: #ffffff;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 5px 0px 0px 5px;
+}
+
+.detail-icon p {
+  padding: 10px;
+  color: #2a4494;
+}
+
+.input-medium {
+  width: 70%;
+}
+
+.price-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 0.2px solid #685f74;
+  border-radius: 5px;
+  -webkit-box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.2);
+          box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.2);
+  color: rgba(0, 0, 0, 0.7);
 }
 /*# sourceMappingURL=styles.css.map */

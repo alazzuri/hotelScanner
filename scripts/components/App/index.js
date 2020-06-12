@@ -9,6 +9,6 @@ const App = () => (
   <Container>
     <Header />
     <FilterBar options={options} />
-    <HotelContainer />
+    <HotelContainer data={hotelsData} />
   </Container>
 );

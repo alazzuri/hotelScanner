@@ -16,7 +16,7 @@ const SelectInput = ({
         id={`input-${label}`}
         onChange={onChangeFunction}
       >
-        <option>{defaultPlaceholder}</option>
+        <option value={""}>{defaultPlaceholder}</option>
         {options.map((element, index) => (
           <option value={element} key={`$${element}-${index}`}>
             {element}

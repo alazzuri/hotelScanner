@@ -1,6 +1,6 @@
 const convertDateToString = (miliseconds) => {
   const dateToString = moment
-    .unix(miliseconds / 1000)
+    .unix(miliseconds)
     .utc()
     .locale("es")
     .format("dddd, LL");

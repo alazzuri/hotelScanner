@@ -3,7 +3,7 @@ const { useState, useEffect } = React;
 const App = () => {
   const [selectedHotels, setSelectedHotels] = useState(hotelsData);
   const [filters, setFilters] = useState({});
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   const handleChange = (e) => {
     const inputType = setInputType(
@@ -24,7 +24,6 @@ const App = () => {
   };
 
   useEffect(() => {
-    setLoading(true);
     document.querySelector("body").classList.toggle("body-loading");
     setTimeout(() => {
       document.querySelector("body").classList.toggle("body-loading");

@@ -3,6 +3,7 @@ const { useState, useEffect } = React;
 const App = () => {
   const [selectedHotels, setSelectedHotels] = useState(hotelsData);
   const [filters, setFilters] = useState({});
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     const inputType = setInputType(
@@ -23,11 +24,19 @@ const App = () => {
   };
 
   useEffect(() => {
+    setLoading(true);
+    document.querySelector("body").classList.toggle("body-loading");
+    setTimeout(() => {
+      document.querySelector("body").classList.toggle("body-loading");
+      setLoading(false);
+    }, 2000);
+
     setSelectedHotels(filterHotels(hotelsData, filters));
   }, [filters]);
 
   return (
     <Container>
+      <PageLoader showLoader={loading} />
       <Header
         dateFrom={convertDateToString(filters.dateFrom)}
         dateTo={convertDateToString(filters.dateTo)}

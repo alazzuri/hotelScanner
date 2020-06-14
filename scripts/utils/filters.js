@@ -16,11 +16,11 @@ const filterByPrice = (price, hotelData) => {
 };
 
 const filterBySize = (size, hotelData) => {
-  if (size.toLowerCase() === "pequeño") {
+  if (size && size.toLowerCase() === "pequeño") {
     return hotelData.rooms <= 10;
-  } else if (size.toLowerCase() === "mediano") {
+  } else if (size && size.toLowerCase() === "mediano") {
     return hotelData.rooms >= 10 && hotelData.rooms <= 20;
-  } else if (size.toLowerCase() === "grande") {
+  } else if (size && size.toLowerCase() === "grande") {
     return hotelData.rooms > 20;
   } else {
     return hotelsData;

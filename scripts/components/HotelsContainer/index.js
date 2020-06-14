@@ -1,7 +1,8 @@
-const HotelContainer = () => (
+const HotelContainer = ({ data }) => (
   <section className="mx-auto hotels-container">
-    {hotelsData.map((hotel, index) => (
+    {data.map((hotel, index) => (
       <Card
+        key={`${hotel.name}-${index}`}
         name={hotel.name}
         description={hotel.description}
         country={hotel.country}

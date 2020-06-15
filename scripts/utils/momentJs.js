@@ -32,3 +32,9 @@ const validateDate = (input) => {
 
   return input >= now && input <= maxDate && true;
 };
+
+const formatDateToUtc = (date) => {
+  const localDate = moment.utc(date);
+  const convertedDate = localDate.hour(0).minute(0).second(0).millisecond(0);
+  return convertedDate.valueOf();
+};

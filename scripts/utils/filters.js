@@ -1,8 +1,17 @@
 const filterByDate = (dateFrom, dateTo, hotelData) => {
-  return dateFrom && dateTo
-    ? hotelData.availabilityFrom / 1000 >= dateFrom &&
-        hotelData.availabilityTo / 1000 >= dateTo
-    : hotelData;
+  const availabilityFrom = formatDateToUtc(hotelData.availabilityFrom) / 1000;
+
+  const availabilityTo = formatDateToUtc(hotelData.availabilityTo) / 1000;
+
+  if (dateFrom && dateTo && dateFrom <= dateTo) {
+    return availabilityFrom <= dateFrom && availabilityTo >= dateTo;
+  } else if (dateFrom) {
+    return availabilityFrom <= dateFrom;
+  } else if (dateTo) {
+    return availabilityTo >= dateTo;
+  } else {
+    return hotelData;
+  }
 };
 
 const filterByCountry = (country, hotelData) => {

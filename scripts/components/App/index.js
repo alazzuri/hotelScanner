@@ -6,6 +6,8 @@ const App = () => {
   const [loading, setLoading] = useState(true);
 
   const handleChange = (e) => {
+    setLoading(true);
+
     const inputType = setInputType(
       e.target.id.split("input-").join("").toLowerCase()
     );
@@ -18,9 +20,14 @@ const App = () => {
         ? e.target.value.length
         : e.target.value;
 
-    setFilters((prevState) => {
-      return { ...prevState, [inputType]: data };
-    });
+    if (e.target.type === "date" && !validateDate(e.target.valueAsNumber)) {
+      // alert("Invalid date"); ///hanlde this
+      //handle this when input is reseted
+    } else {
+      setFilters((prevState) => {
+        return { ...prevState, [inputType]: data };
+      });
+    }
   };
 
   useEffect(() => {
@@ -40,7 +47,11 @@ const App = () => {
         dateFrom={convertDateToString(filters.dateFrom)}
         dateTo={convertDateToString(filters.dateTo)}
       />
-      <FilterBar options={options} onChangeFunction={handleChange} />
+      <FilterBar
+        options={options}
+        onChangeFunction={handleChange}
+        dateFrom={filters.dateFrom}
+      />
       <HotelContainer data={selectedHotels} />
     </Container>
   );

@@ -1,7 +1,11 @@
-const FilterBar = ({ options, onChangeFunction }) => (
+const FilterBar = ({ options, onChangeFunction, dateFrom }) => (
   <section className="mx-auto filter-bar">
     <DateInput label="Entrada" onChangeFunction={onChangeFunction} />
-    <DateInput label="Salida" onChangeFunction={onChangeFunction} />
+    <DateInput
+      label="Salida"
+      onChangeFunction={onChangeFunction}
+      dateFrom={dateFrom}
+    />
     <SelectInput
       label="País"
       defaultPlaceholder="Cualquier país"

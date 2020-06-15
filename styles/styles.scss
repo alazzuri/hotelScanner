@@ -28,9 +28,12 @@ $font-primary: "Montserrat", sans-serif;
   font-weight: 700;
 }
 
+body {
+  background-color: $bg-primary;
+}
+
 //STYLES
 .main-container {
-  background-color: $bg-primary;
   font-family: $font-primary;
   margin: 0;
   padding: 0;
@@ -160,7 +163,9 @@ $font-primary: "Montserrat", sans-serif;
 
 .hotels-container {
   width: 90%;
+  height: 100%;
   margin-top: 30px;
+  margin-bottom: 10px;
   display: grid;
   grid-gap: 20px;
   grid-auto-flow: dense;
@@ -181,6 +186,8 @@ $font-primary: "Montserrat", sans-serif;
   border: 0.2px solid #685f74;
   border-radius: 5px;
   box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.5);
+  max-width: 450px;
+  margin: 0 auto;
 
   .card-body {
     display: flex;
@@ -195,7 +202,10 @@ $font-primary: "Montserrat", sans-serif;
     color: $white;
     border-radius: 0px 0px 5px 5px;
     &:hover {
-      background-color: lighten($color: $color-primary, $amount: 5);
+      background-color: darken($color: $color-primary, $amount: 5);
+    }
+    &:active {
+      background-color: darken($color: $color-primary, $amount: 8);
     }
   }
 }
@@ -315,4 +325,20 @@ $font-primary: "Montserrat", sans-serif;
   pointer-events: none;
   overflow: hidden;
   position: fixed;
+}
+
+.not-found-message {
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  color: $color-secondary;
+  text-align: center;
+  flex-direction: column;
+  overflow: hidden;
+
+  h3,
+  h4,
+  p {
+    margin-top: 20px;
+  }
 }

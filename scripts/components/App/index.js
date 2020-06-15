@@ -20,14 +20,9 @@ const App = () => {
         ? e.target.value.length
         : e.target.value;
 
-    if (e.target.type === "date" && !validateDate(e.target.valueAsNumber)) {
-      // alert("Invalid date"); ///hanlde this
-      //handle this when input is reseted
-    } else {
-      setFilters((prevState) => {
-        return { ...prevState, [inputType]: data };
-      });
-    }
+    setFilters((prevState) => {
+      return { ...prevState, [inputType]: data };
+    });
   };
 
   useEffect(() => {

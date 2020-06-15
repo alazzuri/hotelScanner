@@ -1,4 +1,4 @@
-const DateInput = ({ label, onChangeFunction }) => (
+const DateInput = ({ label, onChangeFunction, dateFrom }) => (
   <div className="form-group col">
     <label htmlFor={`input-${label}`}>{label}</label>
     <div className="form-control input-container">
@@ -6,6 +6,8 @@ const DateInput = ({ label, onChangeFunction }) => (
       <input
         type="date"
         id={`input-${label}`}
+        min={`${minDateFrom(dateFrom)}`}
+        max={`${maxDateTo()}`}
         onChange={onChangeFunction}
       ></input>
     </div>

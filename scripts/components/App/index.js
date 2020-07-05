@@ -59,6 +59,7 @@ const App = () => {
       ) : (
         <HotelContainer data={selectedHotels} />
       )}
+      <Footer />
     </Container>
   );
 };

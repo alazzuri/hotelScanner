@@ -1,5 +1,5 @@
 const LoadingSkeleton = () => (
-  <div className="card card-container bg-light w-100">
+  <div className="card card-container bg-light w-100" data-aos="zoom-in">
     <div className="ph-item bg-light m-0 p-0">
       <div className="ph-col-12 card-img-top p-0 m-0">
         <div className="ph-picture m-0 p-0"></div>

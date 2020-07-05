@@ -1,0 +1,15 @@
+//FONTS
+@mixin fontLight {
+  font-family: $font-primary;
+  font-weight: 200;
+}
+
+@mixin fontNormal {
+  font-family: $font-primary;
+  font-weight: 400;
+}
+
+@mixin fontBold {
+  font-family: $font-primary;
+  font-weight: 700;
+}

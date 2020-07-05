@@ -5,7 +5,7 @@ const DateDetails = ({ dateFrom, dateTo }) => (
         <h3>Hoteles</h3>
         <p className="date-details">
           desde el <strong>{dateFrom}</strong> hasta el
-          <strong>{dateTo}</strong>
+          <strong> {dateTo}</strong>
         </p>
       </React.Fragment>
     ) : (

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" />
     <title>HotelScanner</title>
     <link
       rel="stylesheet"
@@ -14,7 +15,11 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" rel="preload" href="styles/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/placeholder-loading/dist/css/placeholder-loading.min.css"
+    />
   </head>
   <body>
     <script
@@ -42,6 +47,10 @@
     <script src="./scripts/utils/inputs.js" type="text/babel"></script>
     <script
       src="./scripts/components/PageLoader/index.js"
+      type="text/babel"
+    ></script>
+    <script
+      src="./scripts/components/LoadingSkeleton/index.js"
       type="text/babel"
     ></script>
     <script

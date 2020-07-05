@@ -490,6 +490,7 @@ body {
   pointer-events: none;
   overflow: hidden;
   position: fixed;
+  width: 100vw;
 }
 
 .not-found-message {

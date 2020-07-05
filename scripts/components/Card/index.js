@@ -9,7 +9,7 @@ const Card = ({
   maxPrice,
 }) => (
   <div className="card card-container">
-    <img className="card-img-top" src={image} alt="Card image cap" />
+    <img className="card-img-top" src={image} alt="card image" />
     <div className="card-body p-0">
       <div className="h-75">
         <h3 className="card-title pl-5 pr-5 pt-4">{name}</h3>

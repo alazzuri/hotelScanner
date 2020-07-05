@@ -3,10 +3,15 @@ const { useState, useEffect } = React;
 const App = () => {
   const [selectedHotels, setSelectedHotels] = useState(hotelsData);
   const [filters, setFilters] = useState({});
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState({
+    pageLoading: true,
+    hotelLoading: false,
+  });
 
   const handleChange = (e) => {
-    setLoading(true);
+    setLoading((prevState) => {
+      return { ...prevState, hotelLoading: true };
+    });
 
     const inputType = setInputType(
       e.target.id.split("input-").join("").toLowerCase()
@@ -26,10 +31,12 @@ const App = () => {
   };
 
   useEffect(() => {
-    document.querySelector("body").classList.toggle("body-loading");
-    setTimeout(() => {
+    loading.pageLoading &&
       document.querySelector("body").classList.toggle("body-loading");
-      setLoading(false);
+    setTimeout(() => {
+      loading.pageLoading &&
+        document.querySelector("body").classList.toggle("body-loading");
+      setLoading({ pageLoading: false, hotelLoading: false });
     }, 2000);
 
     setSelectedHotels(filterHotels(hotelsData, filters));
@@ -37,7 +44,7 @@ const App = () => {
 
   return (
     <Container>
-      <PageLoader showLoader={loading} />
+      <PageLoader showLoader={loading.pageLoading} />
       <Header
         dateFrom={convertDateToString(filters.dateFrom)}
         dateTo={convertDateToString(filters.dateTo)}
@@ -47,7 +54,11 @@ const App = () => {
         onChangeFunction={handleChange}
         dateFrom={filters.dateFrom}
       />
-      <HotelContainer data={selectedHotels} />
+      {loading.hotelLoading ? (
+        <SkeletonsContainer itemsToRender={6} />
+      ) : (
+        <HotelContainer data={selectedHotels} />
+      )}
     </Container>
   );
 };

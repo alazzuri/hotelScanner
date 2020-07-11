@@ -260,6 +260,7 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    margin-top: 10px;
   }
   .header .data-details-container {
     width: 90%;
@@ -273,10 +274,11 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    text-align: center;
+    margin-top: 20px;
   }
   .header .data-details-container .date-details {
     padding-right: 0;
-    text-align: center;
   }
 }
 
@@ -590,6 +592,7 @@ p {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    height: auto;
   }
 }
 /*# sourceMappingURL=styles.css.map */

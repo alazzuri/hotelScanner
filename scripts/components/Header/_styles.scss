@@ -43,6 +43,7 @@
     .main-logo {
       width: 90%;
       justify-content: center;
+      margin-top: 10px;
     }
 
     .data-details-container {
@@ -50,10 +51,11 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      text-align: center;
+      margin-top: 20px;
 
       .date-details {
         padding-right: 0;
-        text-align: center;
       }
     }
   }

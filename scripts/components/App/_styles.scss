@@ -1,0 +1,10 @@
+body {
+  background-color: $bg-primary;
+}
+
+.body-loading {
+  pointer-events: none;
+  overflow: hidden;
+  position: fixed;
+  width: 100vw;
+}

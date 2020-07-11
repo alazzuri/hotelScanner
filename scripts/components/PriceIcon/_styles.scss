@@ -1,0 +1,16 @@
+.price-icon {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 0.2px solid #685f74;
+  border-radius: 5px;
+  box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.2);
+}
+
+.price-active {
+  color: $color-primary;
+}
+
+.price-muted {
+  color: lighten($color: $text-primary, $amount: 30);
+}

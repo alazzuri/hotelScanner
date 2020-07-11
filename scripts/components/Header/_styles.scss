@@ -1,0 +1,60 @@
+.header {
+  height: 25%;
+  background-color: darken($color: $bg-secondary, $amount: 0.3);
+  padding: 20px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .main-logo {
+    width: 20%;
+    max-width: 300px;
+    color: $color-secondary;
+    display: flex;
+    align-items: center;
+
+    .logo-name {
+      margin-left: 10px;
+      font-size: 1.8rem;
+      @include fontBold();
+    }
+  }
+
+  .data-details-container {
+    width: 60%;
+
+    h3 {
+      color: $color-secondary;
+      @include fontBold();
+    }
+
+    .date-details {
+      color: $color-primary;
+      padding-top: 15px;
+      padding-right: 10px;
+      font-size: 1.2rem;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    height: auto;
+    flex-direction: column;
+
+    .main-logo {
+      width: 90%;
+      justify-content: center;
+    }
+
+    .data-details-container {
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .date-details {
+        padding-right: 0;
+        text-align: center;
+      }
+    }
+  }
+}

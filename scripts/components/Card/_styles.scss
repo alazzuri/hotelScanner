@@ -1,0 +1,33 @@
+.card-container {
+  border: 0.2px solid #685f74;
+  border-radius: 5px;
+  box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.5);
+  max-width: 450px;
+  margin: 0 auto;
+
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .btn-book {
+    width: 100%;
+    padding: 16px;
+    background-color: $color-primary;
+    color: $white;
+    border-radius: 0px 0px 5px 5px;
+    &:hover {
+      background-color: darken($color: $color-primary, $amount: 5);
+    }
+    &:active {
+      background-color: darken($color: $color-primary, $amount: 8);
+    }
+  }
+}
+
+.detail-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}

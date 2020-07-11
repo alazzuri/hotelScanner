@@ -2,9 +2,9 @@
 
 ### Aplicación de búsqueda y filtrado de hoteles hecha con React.
 
----
-
 [English Version](./README-en.md)
+
+---
 
 <img src="./assets/readme/mac-mockup.png" style="margin-top:30px;">
 

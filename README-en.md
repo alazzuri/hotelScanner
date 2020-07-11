@@ -2,9 +2,9 @@
 
 ### An application to search and filter your favorite hotels
 
----
-
 [Spanish Version](./README.md)
+
+---
 
 <img src="./assets/readme/mac-mockup.png" style="margin-top:30px;">
 

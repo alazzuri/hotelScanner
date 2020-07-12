@@ -1,3 +1,10 @@
+const renderOptions = (options) =>
+  options.map((element, index) => (
+    <option value={element} key={`$${element}-${index}`}>
+      {element}
+    </option>
+  ));
+
 const SelectInput = ({
   label,
   defaultPlaceholder,
@@ -17,11 +24,7 @@ const SelectInput = ({
         onChange={onChangeFunction}
       >
         <option value={""}>{defaultPlaceholder}</option>
-        {options.map((element, index) => (
-          <option value={element} key={`$${element}-${index}`}>
-            {element}
-          </option>
-        ))}
+        {renderOptions(options)}
       </select>
     </div>
   </div>

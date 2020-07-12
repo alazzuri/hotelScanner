@@ -22,17 +22,6 @@ const maxDateTo = () => {
   return maxLimit;
 };
 
-//check this and handle message
-const validateDate = (input) => {
-  const now =
-    moment().set({ hour: 0, minute: 0, second: 0, millisecond: 0 }).valueOf() /
-    1000;
-  const dateTo = hotelsData.map((h) => h.availabilityTo);
-  const maxDate = Math.max(...dateTo);
-
-  return input >= now && input <= maxDate && true;
-};
-
 const formatDateToUtc = (date) => {
   const localDate = moment.utc(date);
   const convertedDate = localDate.hour(0).minute(0).second(0).millisecond(0);

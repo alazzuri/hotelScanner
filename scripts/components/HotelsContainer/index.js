@@ -15,7 +15,7 @@ const renderHotelCards = (data) =>
 
 const NotFoundPlaceholder = () => (
   <div className="not-found-message">
-    <i class="far fa-meh-rolling-eyes fa-4x"></i>
+    <i className="far fa-meh-rolling-eyes fa-4x"></i>
     <h3>Ups!</h3>
     <h4>No encontramos hoteles que coincidan con tu búsqueda</h4>
     <p>Intentá cambiando los filtros aplicados</p>

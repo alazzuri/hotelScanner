@@ -399,6 +399,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   overflow: hidden;
+  grid-column: span 2;
 }
 
 .not-found-message h3,
